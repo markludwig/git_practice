@@ -21,6 +21,7 @@ Adding Changes to the Staging Area
 ----------------------------------
 git add filename.txt
 
+- Show changes
 git status
 
 
