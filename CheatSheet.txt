@@ -1,0 +1,87 @@
+Codeacademy - Learn Git
+
+*********************************
+* Lesson 1 - Basic Git Workflow *
+*********************************
+
+A Git project has three parts:
+
+1) A Working Directory: where files are created, edited, deleted, and organized
+2) A Staging Area: where changes that are made to the working directory are listed
+3) A Repository: where Git permanently stores changes as different versions of the project
+
+
+Initializing a Git Repository
+-----------------------------
+cd /Users/mark/GitHub/
+git init
+
+
+Adding Changes to the Staging Area
+----------------------------------
+git add filename.txt
+
+git status
+
+
+Displaying Differences with Git Diff
+------------------------------------
+git diff hello.txt
+
+
+Committing Your Code
+--------------------
+git commit -m "Log message here"
+
+- Must be in quotation marks
+- Written in the present tense
+- Should be brief (50 characters or less) when using -m
+
+
+Showing Git Commit Logs
+-----------------------
+git log
+
+
+*************************
+* Set Up Git and GitHub *
+*************************
+
+1) Make a new directory to practice.
+
+	mkdir git_practice
+
+2) Make the new directory your working directory.
+
+	cd git_practice
+
+3) Turn the current, empty directory into a fresh Git repository.
+
+	git init
+
+4) Create a new README file (more on this later) with some sample text.
+
+	echo "Hello Git and GitHub" >> README.txt
+
+5) Add the new file to the Git staging area.
+
+	git add README.txt
+
+6) Make your first commit with the new README file.
+
+	git commit -m "First commit"
+
+7) Login to GitHub
+
+8) Create a repository
+
+	Click on the "New repository" button
+
+9) Connect to the remote repository from the command line
+
+	git remote add origin https:// (Link from the GitHub page)
+
+10) Push the commited changes to the remote repository
+
+	git push -u origin master
+
