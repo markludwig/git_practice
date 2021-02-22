@@ -13,7 +13,7 @@ A Git project has three parts:
 
 Initializing a Git Repository
 -----------------------------
-cd /Users/mark/GitHub/
+cd /Users/mark/GitHub/ProjectFolder
 git init
 
 
@@ -21,7 +21,7 @@ Adding Changes to the Staging Area
 ----------------------------------
 git add filename.txt
 
-- Show changes
+- Show additions
 git status
 
 
@@ -85,4 +85,95 @@ git log
 10) Push the commited changes to the remote repository
 
 	git push -u origin master
+
+
+*******************************
+* Lesson 2 - How to Backtrack *
+*******************************
+
+Showing Latest Commit Log
+-------------------------
+git show HEAD
+
+
+Staging Multiple Files
+----------------------
+git add filename_1 filename_2
+
+- All files
+git add .
+
+
+Remove File from Staging
+------------------------
+git reset HEAD filename
+
+
+Rolling Back to Last Commit
+---------------------------
+Revert the working file to the last committed version
+
+git checkout HEAD filename
+
+- Check if successful (this should report nothing)
+git diff
+
+
+Git Reset Using SHA
+-------------------
+In this example, the HEAD was reset to the commit made on Wed Jan 6.
+Use the first seven digits of a previous commit’s SHA.
+
+git log
+
+	commit 9d63f80111447544c303e9f1776fa08593a87310
+	Date: Jan 13 HH:MI:SS YYYY
+
+	commit 3ba6efbeece6ed530d85de5e313e52123fdf8cb4
+	Date: Jan 6 HH:MI:SS YYYY
+
+	git reset 3ba6efb
+
+
+*****************************
+* Lesson 3 -  Git Branching *
+*****************************
+
+Check Current Branch
+--------------------
+git branch
+
+
+Create a New Branch
+-------------------
+git branch new_branch_name
+
+
+Switch to the New Branch
+------------------------
+git checkout new_branch_namels
+
+
+Merge Branch into Master
+------------------------
+git merge branch_name
+
+
+Handling Merge Conflicts
+------------------------
+Review the markings in the file
+
+	<<<<<<< HEAD
+	master version of line
+	=======
+	fencing version of line
+	>>>>>>> fencing
+
+From the code editor, choose which verson to keep. Delete
+any of Git's markings (> =)
+
+
+Delete Branch
+-------------
+git branch -d branch_name
 
